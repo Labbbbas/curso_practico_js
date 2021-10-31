@@ -1,17 +1,4 @@
-const salariosMex = mexico.map(
-    function (persona){
-        return persona.salary;
-    }
-);
-
-
-const salariosMexSorted = salariosMex.sort(
-    function(salaryA, salaryB){
-        return salaryA - salaryB;
-    }
-);
-
-
+// Helper functions
 function esPar(numero){
     // if(numero % 2 === 0){
     //     return true;
@@ -19,9 +6,8 @@ function esPar(numero){
     // else{
     //     return false;
     // }
-    return (numero % 2 ===0);
+    return (numero % 2 === 0);
 }
-
 
 function calcularMediaAritmetica(lista){
     const sumaLista = lista.reduce(
@@ -33,6 +19,19 @@ function calcularMediaAritmetica(lista){
     return promedioLista
 }
 
+
+// Calculando mediana general
+const salariosMex = mexico.map(
+    function (persona){
+        return persona.salary;
+    }
+);
+
+const salariosMexSorted = salariosMex.sort(
+    function (salaryA, salaryB){
+        return salaryA - salaryB;
+    }
+);
 
 function medianaSalariosMex(lista){
     const mitad = parseInt(lista.length / 2);
@@ -50,6 +49,20 @@ function medianaSalariosMex(lista){
 }
 
 
+// Mediana Top 10%
+const spliceStart = salariosMexSorted.length * .90;
+const spliceCount = salariosMexSorted.length - spliceStart;
+
+const salariosMexTop10 = salariosMexSorted.splice(spliceStart, spliceCount);
+
+
+// Guardamos resultados
+const medianaGeneralMex = medianaSalariosMex(salariosMexSorted);
+const medianaTop10Mex = medianaSalariosMex(salariosMexTop10);
+
+
+// Mostramos resultados
 console.log(
-    medianaSalariosMex(salariosMexSorted)
+    {medianaGeneralMex,
+    medianaTop10Mex}
 );
