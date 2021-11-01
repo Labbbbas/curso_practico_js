@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interés Compuesto vs Interés Simple</title>
+</head>
+<body>
+    <header>
+        <h1>
+            Diferencia entre Interés Compuesto vs Interés Simple
+        </h1>
+        <h4>
+            Mientras que el interés simple genera un rendimiendo siempre basado 
+            en la inversión inicial, el interés<br>compuesto genera rendimiento de 
+            los interéses ya generados. 
+            <br><br>Es decir, a través del tiempo generarás muchísimo más dinero con el 
+            interés compuesto que con el simple.
+        </h4>
+        <br>
+        <p><strong>Hagamos una prueba ;)</strong></p>
+        <script src="./intereses.js"></script>
+    </header>
+    <section>
+        <form>
+            <label for="inputMonto">
+                Ingresa el monto inicial
+            </label>
+            <input id="inputMonto" type="number">
+            <br><br>
+            <label for="inputInteres">
+                Ingresa el interés porcentual
+            </label>
+            <input id="inputInteres" type="number">
+            <br><br>
+            <label for="inputTiempo">
+                Ingresa el tiempo en meses
+            </label>
+            <input id="inputTiempo" type="number">
+            <br><br>
+            <button type="button" onclick="calcularIntereses()">
+                Calcular interés simple y compuesto
+            </button>
+        </form>
+        <br><br>
+        <p id="resultado1"></p>
+        <p id="resultado2"></p>
+        <strong><p id="final"></p></strong>
+    </section>
+</body>
+</html>
