@@ -57,14 +57,16 @@ function calcularPerimetroCuadrado(){
     const input = document.getElementById("InputCuadrado");
     const value = input.value;
     const perimetro = perimetroCuadrado(value);
-    alert(perimetro);
+    const resultado = document.getElementById("perimetroCuadrado");
+    resultado.innerText = "Perímetro: " + perimetro + " cm";
 }
 
 function calcularAreaCuadrado(){
     const input = document.getElementById("InputCuadrado");
     const value = input.value;
     const area = areaCuadrado(value);
-    alert(area);
+    const resultado = document.getElementById("areaCuadrado");
+    resultado.innerText = "Área: " + area + " cm²";
 }
 
 
@@ -77,7 +79,8 @@ function calcularPerimetroTriangulo(){
     var input = document.getElementById("InputBase");
     const base = Number(input.value);
     const perimetro = perimetroTriangulo(lado1, lado2, base);
-    alert(perimetro);
+    const resultado = document.getElementById("perimetroTriangulo");
+    resultado.innerText = "Perímetro: " + perimetro + " cm";
 }
 
 function calcularAreaTriangulo(){
@@ -86,7 +89,8 @@ function calcularAreaTriangulo(){
     var input = document.getElementById("InputAltura");
     const altura = input.value;
     const area = areaTriangulo(base, altura);
-    alert(area);
+    const resultado = document.getElementById("areaTriangulo");
+    resultado.innerText = "Área: " + area + " cm²";
 }
 
 
@@ -95,12 +99,14 @@ function calcularPerimetroCirculo(){
     const input = document.getElementById("InputCirculo");
     const value = input.value;
     const perimetro = perimetroCirculo(value);
-    alert(perimetro);
+    const resultado = document.getElementById("perimetroCirculo");
+    resultado.innerText = "Perímetro: " + perimetro + " cm";
 }
 
 function calcularAreaCirculo(){
     const input = document.getElementById("InputCirculo");
     const value = input.value;
     const area = areaCirculo(value);
-    alert(area);
+    const resultado = document.getElementById("areaCirculo");
+    resultado.innerText = "Área: " + area + " cm²";
 }

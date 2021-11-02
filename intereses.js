@@ -18,5 +18,5 @@ function calcularIntereses(){
     const resultado2 = document.getElementById("resultado2");
     resultado2.innerText = "Tu inversión de $" + monto + " con interés compuesto del " + interes + "% tras " + tiempo + " meses sería de: $" + compuesto;
     const final = document.getElementById("final");
-    final.innerText = "Queda más que demostrado el poder el interés compuesto B)";
+    final.innerText = "Queda más que demostrado el poder del interés compuesto B)";
 }
